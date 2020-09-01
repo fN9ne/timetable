@@ -1,1 +1,123 @@
-<!DOCTYPE html><html lang="ru"><head>	<meta charset="utf-8">	<link rel="shortcut icon" href="img/icon.png">	<meta name="viewport" content="width=device-width, initial-scale=1">	<title>Расписание</title>	<link rel="stylesheet" href="css/style.min.css">	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->	<!-- <script src="https://kit.fontawesome.com/0466223aa3.js" crossorigin="anonymous"></script> --></head><body>	<div class="wrapper">		<main class="page">			<div class="day day_1">				<div class="container">					<div class="day__name">Понедельник</div>					<div class="day__item">						<div class="lesson">Информатика</div>						<div class="teacher">Юлия Геннадьевна <span>Белашева</span></div>					</div>					<div class="day__item">						<div class="lesson">Математика</div>						<div class="teacher">Тамара Викторовна <span>Кравцова</span></div>					</div>					<div class="day__item">						<div class="lesson">Литература</div>						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>					</div>					<div class="day__item">						<div class="lesson">Физическая культура</div>						<div class="teacher">Андрей Иванович <span>Белашев</span></div>					</div>				</div>			</div>			<div class="day day_2">				<div class="container">					<div class="day__name">Вторник</div>					<div class="day__item">						<div class="lesson">История</div>						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>					</div>					<div class="day__item">						<div class="lesson">Химия</div>						<div class="teacher">Константин Александрович <span>Поморцев</span></div>					</div>					<div class="day__item">						<div class="lesson">Русский язык</div>						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>					</div>				</div>			</div>			<div class="day day_3">				<div class="container">					<div class="day__name">Среда</div>					<div class="day__item">						<div class="lesson">Физика</div>						<div class="teacher">Ольга Николаевна <span>Бреусова</span></div>					</div>					<div class="day__item">						<div class="lesson">Литература</div>						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>					</div>					<div class="day__item">						<div class="lesson">Обществознание</div>						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>					</div>				</div>			</div>			<div class="day day_4">				<div class="container">					<div class="day__name">Четверг</div>					<div class="day__item">						<div class="lesson">Иностранный язык</div>						<div class="teacher"><p>Юлия Олеговна <span>Ориховская</span></p><p>Лилия Андреевна <span>Пилил</span></p></div>					</div>					<div class="day__item">						<div class="lesson">Биология</div>						<div class="teacher">Константин Александрович <span>Поморцев</span></div>					</div>					<div class="day__item">						<div class="lesson">ОБЖ</div>						<div class="teacher">Светлана Петровна <span>Прихожая</span></div>					</div>				</div>			</div>			<div class="day day_5">				<div class="container">					<div class="day__name">Пятница</div>					<div class="day__item">						<div class="lesson">История</div>						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>					</div>					<div class="day__item">						<div class="lesson">Математика</div>						<div class="teacher">Тамара Викторовна <span>Кравцов</span></div>					</div>					<div class="day__item">						<div class="lesson">Родной язык</div>						<div class="teacher">Юлия Олеговна <span>Ориховская</span></div>					</div>				</div>			</div>			<div class="day day_6">				<div class="container">					<div class="day__name">Суббота</div>					<div class="day__item">						<div class="lesson">Обществознание</div>						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>					</div>					<div class="day__item">						<div class="lesson">Математика</div>						<div class="teacher">Тамара Викторовна <span>Кравцова</span></div>					</div>				</div>			</div>		</main>	</div>	<script src="js/script.min.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Расписание</title>
+	<link rel="stylesheet" href="css/style.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<!-- <script src="https://kit.fontawesome.com/0466223aa3.js" crossorigin="anonymous"></script> -->
+</head>
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<div class="day day_1">
+				<div class="container">
+					<div class="day__name">Понедельник</div>
+					<div class="day__item">
+						<div class="lesson">Информатика</div>
+						<div class="teacher">Юлия Геннадьевна <span>Белашева</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Математика</div>
+						<div class="teacher">Тамара Викторовна <span>Кравцова</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Литература</div>
+						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Физическая культура</div>
+						<div class="teacher">Андрей Иванович <span>Белашев</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="day day_2">
+				<div class="container">
+					<div class="day__name">Вторник</div>
+					<div class="day__item">
+						<div class="lesson">История</div>
+						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Химия</div>
+						<div class="teacher">Константин Александрович <span>Поморцев</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Русский язык</div>
+						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="day day_3">
+				<div class="container">
+					<div class="day__name">Среда</div>
+					<div class="day__item">
+						<div class="lesson">Физика</div>
+						<div class="teacher">Ольга Николаевна <span>Бреусова</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Литература</div>
+						<div class="teacher">Светлана Юрьевна <span>Ковалёва</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Обществознание</div>
+						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="day day_4">
+				<div class="container">
+					<div class="day__name">Четверг</div>
+					<div class="day__item">
+						<div class="lesson">Иностранный язык</div>
+						<div class="teacher"><p>Юлия Олеговна <span>Ориховская</span></p><p>Лилия Андреевна <span>Пилил</span></p></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Биология</div>
+						<div class="teacher">Константин Александрович <span>Поморцев</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">ОБЖ</div>
+						<div class="teacher">Светлана Петровна <span>Прихожая</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="day day_5">
+				<div class="container">
+					<div class="day__name">Пятница</div>
+					<div class="day__item">
+						<div class="lesson">История</div>
+						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Математика</div>
+						<div class="teacher">Тамара Викторовна <span>Кравцова</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Родной язык</div>
+						<div class="teacher">Юлия Олеговна <span>Ориховская</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="day day_6">
+				<div class="container">
+					<div class="day__name">Суббота</div>
+					<div class="day__item">
+						<div class="lesson">Обществознание</div>
+						<div class="teacher">Ольга Михайловна <span>Буденис</span></div>
+					</div>
+					<div class="day__item">
+						<div class="lesson">Математика</div>
+						<div class="teacher">Тамара Викторовна <span>Кравцова</span></div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/script.min.js"></script>
+</body>
+</html>
