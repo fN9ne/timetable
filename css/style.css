@@ -71,9 +71,9 @@
   background: #000;
   height: 2px;
   position: absolute;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu-header__burger:before {
@@ -195,6 +195,82 @@ h6 {
   font-weight: 400;
 }
 
+body {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body._dark {
+  background: #212121;
+}
+
+body._dark .labels {
+  background: #303030;
+}
+
+body._dark .labels__item {
+  background: #E6E6E6;
+  color: #212121;
+}
+
+body._dark .loader:before {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body._dark .loader span:before {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body._dark .loader span:after {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+body._dark .loader__container {
+  background: #212121;
+}
+
+body._dark .weektitle {
+  color: #E6E6E6;
+}
+
+body._dark .container {
+  background: #303030;
+}
+
+body._dark .lesson {
+  color: #E6E6E6;
+}
+
+body._dark .teacher span {
+  color: #E6E6E6;
+}
+
+body._dark .day.tabletime .lesson span {
+  color: #E6E6E6;
+}
+
+body._dark .day.tabletime .teacher {
+  color: #E6E6E6;
+}
+
+body._dark .day.tabletime .teacher span {
+  color: #A1A1A1;
+}
+
+body._dark .day__item:before {
+  color: #E6E6E6;
+}
+
+body._dark .day__name {
+  color: #E6E6E6;
+}
+
+body._page3 {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,9 +281,121 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding: 20px;
+  padding: 20px 20px 70px 20px;
+}
+
+.weektitle {
+  font-size: 72px;
+  color: #000711;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.lt {
+  text-decoration: line-through;
+}
+
+.loader {
+  position: relative;
+}
+
+.loader:before {
+  content: '';
+  width: 10px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  -webkit-animation: 2s loader ease infinite 0.25s;
+          animation: 2s loader ease infinite 0.25s;
+}
+
+.loader span:before,
+.loader span:after {
+  border-radius: 5px;
+  content: '';
+  background: rgba(0, 0, 0, 0.2);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.loader span:before {
+  left: -30px;
+  -webkit-animation: 2s loader ease infinite;
+          animation: 2s loader ease infinite;
+}
+
+.loader span:after {
+  right: -30px;
+  -webkit-animation: 2s loader ease infinite .5s;
+          animation: 2s loader ease infinite .5s;
+}
+
+.loader__container {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader__container._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@-webkit-keyframes loader {
+  0%, 100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes loader {
+  0%, 100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .page {
@@ -217,17 +405,32 @@ h6 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1280px;
-  width: 100%;
   margin: 50px -25px 0px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: 0.5s all linear 0.5s;
+  -o-transition: 0.5s all linear 0.5s;
+  transition: 0.5s all linear 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page._active {
+  position: static;
+  opacity: 1;
+  visibility: visible;
 }
 
 .container {
   background: #f1f1f1;
   padding: 10px;
   height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .day {
@@ -242,6 +445,9 @@ h6 {
   margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 24px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   font-weight: 700;
   margin-top: 5px;
   padding-left: 25px;
@@ -285,7 +491,60 @@ h6 {
 
 .lesson {
   margin-bottom: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   font-size: 16px;
+}
+
+.tabletime.day {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 600px;
+          flex: 0 1 600px;
+}
+
+.tabletime .day__item {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding-left: 35px;
+}
+
+.tabletime .day__item:before {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.tabletime .day__item .lesson {
+  color: #16afe4;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tabletime .day__item .lesson span {
+  color: #000711;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.tabletime .day__item .teacher {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 20px;
+  color: #000711;
+}
+
+.tabletime .day__item .teacher span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #E41646;
 }
 
 .teacher {
@@ -300,7 +559,71 @@ h6 {
   font-size: 14px;
 }
 
+.labels {
+  -webkit-box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f1f1f1;
+}
+
+.labels__item {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #292929;
+  color: #f1f1f1;
+  transition: 0.5s;
+}
+
+@media (min-width: 992px) {
+  .labels__item:hover {
+    background: #333;
+  }
+}
+
 @media (max-width: 768px) {
+  .weektitle {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+
   .page {
     margin: 0px -25px;
   }
@@ -318,9 +641,25 @@ h6 {
   }
 }
 
+@media (max-width: 450px) {
+  .tabletime .day__item .lesson {
+    font-size: 18px;
+  }
+
+  .tabletime .day__item .teacher span {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
 @media (max-width: 425px) {
   .wrapper {
-    padding: 10px;
+    padding: 10px 10px 60px 10px;
+  }
+
+  .weektitle {
+    font-size: 35px;
+    margin-bottom: 10px;
   }
 
   .container {
