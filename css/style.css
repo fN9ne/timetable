@@ -214,6 +214,21 @@ body._dark .labels__item {
   color: #212121;
 }
 
+body._dark .labels__item._active {
+  background: #16afe4;
+  color: #e6e6e6;
+  -webkit-box-shadow: 0px 0px 5px #16afe4;
+          box-shadow: 0px 0px 5px #16afe4;
+}
+
+body._dark .labels__item._active svg {
+  fill: #e6e6e6;
+}
+
+body._dark .labels__item svg {
+  fill: #212121;
+}
+
 body._dark .loader:before {
   background: rgba(255, 255, 255, 0.8);
 }
@@ -287,7 +302,7 @@ body._page3 {
           flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding: 20px 20px 70px 20px;
+  padding: 20px 20px 80px 20px;
 }
 
 .weektitle {
@@ -564,7 +579,7 @@ body._page3 {
           box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 60px;
   bottom: 0;
   left: 0;
   -webkit-transition: 0.5s;
@@ -608,11 +623,33 @@ body._page3 {
       -ms-flex-align: center;
           align-items: center;
   background: #292929;
-  color: #f1f1f1;
   transition: 0.5s;
+  color: #f1f1f1;
+}
+
+.labels__item_4 svg,
+.labels__item_5 svg {
+  margin-left: 3px;
+}
+
+.labels__item._active {
+  background: #16afe4;
+  color: #e6e6e6;
+}
+
+.labels__item._active svg {
+  fill: #e6e6e6;
+}
+
+.labels__item svg {
+  fill: #f1f1f1;
 }
 
 @media (min-width: 992px) {
+  .labels__item._active:hover {
+    background: #37A5D7;
+  }
+
   .labels__item:hover {
     background: #333;
   }
@@ -641,6 +678,12 @@ body._page3 {
   }
 }
 
+@media (max-width: 600px) {
+  .labels__item {
+    margin: 0px 10px;
+  }
+}
+
 @media (max-width: 450px) {
   .tabletime .day__item .lesson {
     font-size: 18px;
@@ -654,7 +697,7 @@ body._page3 {
 
 @media (max-width: 425px) {
   .wrapper {
-    padding: 10px 10px 60px 10px;
+    padding: 10px 10px 70px 10px;
   }
 
   .weektitle {
@@ -685,5 +728,9 @@ body._page3 {
 
   .teacher span {
     font-size: 13px;
+  }
+
+  .labels__item {
+    margin: 0px 5px;
   }
 }
