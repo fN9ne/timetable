@@ -261,6 +261,10 @@ body._dark .teacher span {
   color: #E6E6E6;
 }
 
+body._dark .day._active .container {
+  background: #5C5C5C;
+}
+
 body._dark .day.tabletime .lesson span {
   color: #E6E6E6;
 }
@@ -454,6 +458,10 @@ body._page3 {
       -ms-flex: 0 0 426.66px;
           flex: 0 0 426.66px;
   margin-bottom: 50px;
+}
+
+.day._active .container {
+  background: #DBDBDB;
 }
 
 .day__name {
